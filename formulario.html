@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNova — Formulário de Cadastro</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230a0e1a'/><text y='.9em' font-size='72' x='10'>⚡</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ÂNCORA TOPO -->
+  <a name="topo" id="topo"></a>
+
+  <!-- ========== HEADER + NAV ========== -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">Tech<span>Nova</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="tabelas-midia.html">Dados & Mídia</a></li>
+          <li><a href="formulario.html" class="ativo">Formulário</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>📝 Formulário de Cadastro</h1>
+    <p>Preencha seus dados e faça parte da comunidade TechNova</p>
+  </section>
+
+  <!-- ========== FORMULÁRIO ========== -->
+  <a name="formulario" id="formulario"></a>
+  <section class="section">
+    <div class="container">
+      <div class="form-wrapper">
+
+        <form action="#" method="post" name="cadastro-technova">
+
+          <!-- ================================
+               FIELDSET 1 — DADOS PESSOAIS
+          ================================= -->
+          <fieldset>
+            <legend>👤 Dados Pessoais</legend>
+
+            <!-- 1. Input texto: Nome -->
+            <div class="form-group">
+              <label for="nome">Nome completo <span style="color:#f87171;">*</span></label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome completo"
+                required
+              />
+            </div>
+
+            <!-- 2. Input email -->
+            <div class="form-group">
+              <label for="email">E-mail <span style="color:#f87171;">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="seu@email.com"
+                required
+              />
+            </div>
+
+            <!-- 3. Input date: Data de nascimento -->
+            <div class="form-group">
+              <label for="nascimento">Data de nascimento</label>
+              <input
+                type="date"
+                id="nascimento"
+                name="nascimento"
+              />
+            </div>
+
+            <!-- 4. Input number: Idade -->
+            <div class="form-group">
+              <label for="idade">Idade</label>
+              <input
+                type="number"
+                id="idade"
+                name="idade"
+                min="10"
+                max="100"
+                placeholder="Ex: 25"
+              />
+            </div>
+
+            <!-- 5. Radio: Gênero (obrigatório) -->
+            <div class="form-group">
+              <label>Gênero <span style="color:#f87171;">*</span></label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="genero" value="masculino" required />
+                  Masculino
+                </label>
+                <label>
+                  <input type="radio" name="genero" value="feminino" />
+                  Feminino
+                </label>
+                <label>
+                  <input type="radio" name="genero" value="nao-binario" />
+                  Não-binário
+                </label>
+                <label>
+                  <input type="radio" name="genero" value="prefiro-nao-dizer" />
+                  Prefiro não dizer
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <!-- ================================
+               FIELDSET 2 — PERFIL TECH
+          ================================= -->
+          <fieldset>
+            <legend>💻 Perfil Tecnológico</legend>
+
+            <!-- 6. Select: Nível de experiência -->
+            <div class="form-group">
+              <label for="nivel">Nível de experiência em tecnologia</label>
+              <select id="nivel" name="nivel">
+                <option value="" disabled selected>Selecione seu nível...</option>
+                <option value="iniciante">🌱 Iniciante — Estou começando agora</option>
+                <option value="basico">📗 Básico — Conheço o essencial</option>
+                <option value="intermediario">📘 Intermediário — Tenho projetos práticos</option>
+                <option value="avancado">📙 Avançado — Trabalho com tecnologia</option>
+                <option value="especialista">🏆 Especialista — Sou referência na área</option>
+              </select>
+            </div>
+
+            <!-- 7. Checkbox: Áreas de interesse (obrigatório) -->
+            <div class="form-group">
+              <label>Áreas de interesse <span style="color:#f87171;">*</span> <small style="color:#64748b;">(selecione ao menos uma)</small></label>
+              <div class="check-group" style="flex-direction:column;gap:0.6rem;margin-top:0.75rem;">
+                <label><input type="checkbox" name="interesse" value="ia" /> 🤖 Inteligência Artificial & Machine Learning</label>
+                <label><input type="checkbox" name="interesse" value="web" /> 🌐 Desenvolvimento Web (Front-end / Back-end)</label>
+                <label><input type="checkbox" name="interesse" value="mobile" /> 📱 Desenvolvimento Mobile (iOS / Android)</label>
+                <label><input type="checkbox" name="interesse" value="cloud" /> ☁️ Cloud Computing & DevOps</label>
+                <label><input type="checkbox" name="interesse" value="seguranca" /> 🔐 Segurança da Informação & CyberSec</label>
+                <label><input type="checkbox" name="interesse" value="dados" /> 📊 Ciência de Dados & Analytics</label>
+                <label><input type="checkbox" name="interesse" value="ux" /> 🎨 UX Design & Experiência do Usuário</label>
+                <label><input type="checkbox" name="interesse" value="blockchain" /> ⛓️ Blockchain & Web3</label>
+              </div>
+            </div>
+
+            <!-- 8. Range: Horas de estudo por semana -->
+            <div class="form-group">
+              <label for="horas">Horas de estudo em tecnologia por semana: <strong id="horas-valor" style="color:var(--cor-destaque);">5h</strong></label>
+              <input
+                type="range"
+                id="horas"
+                name="horas"
+                min="1"
+                max="40"
+                value="5"
+                oninput="document.getElementById('horas-valor').textContent = this.value + 'h'"
+              />
+              <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:#64748b;margin-top:0.3rem;">
+                <span>1h</span><span>10h</span><span>20h</span><span>30h</span><span>40h</span>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <!-- ================================
+               FIELDSET 3 — PREFERÊNCIAS
+          ================================= -->
+          <fieldset>
+            <legend>⚙️ Preferências & Mensagem</legend>
+
+            <!-- 9. Radio: Formato de aprendizado preferido -->
+            <div class="form-group">
+              <label>Formato de aprendizado preferido</label>
+              <div class="radio-group" style="flex-direction:column;gap:0.5rem;margin-top:0.5rem;">
+                <label><input type="radio" name="formato" value="video" /> 🎬 Vídeo-aulas gravadas</label>
+                <label><input type="radio" name="formato" value="ao-vivo" /> 📡 Aulas ao vivo (transmissão)</label>
+                <label><input type="radio" name="formato" value="texto" /> 📖 Artigos e textos escritos</label>
+                <label><input type="radio" name="formato" value="pratico" /> 🛠️ Projetos práticos e hands-on</label>
+                <label><input type="radio" name="formato" value="misto" /> 🔀 Formato misto / combinado</label>
+              </div>
+            </div>
+
+            <!-- 10. Checkbox: Newsletter e comunicações -->
+            <div class="form-group">
+              <label>Comunicações</label>
+              <div class="check-group" style="flex-direction:column;gap:0.5rem;margin-top:0.5rem;">
+                <label><input type="checkbox" name="comunicacoes" value="newsletter" checked /> 📬 Quero receber a newsletter semanal</label>
+                <label><input type="checkbox" name="comunicacoes" value="eventos" /> 🎉 Notificações de eventos e webinars</label>
+                <label><input type="checkbox" name="comunicacoes" value="promocoes" /> 🏷️ Promoções e descontos exclusivos</label>
+                <label><input type="checkbox" name="comunicacoes" value="novidades" /> 🚀 Novidades de produtos e funcionalidades</label>
+              </div>
+            </div>
+
+            <!-- Textarea: Mensagem -->
+            <div class="form-group">
+              <label for="mensagem">Mensagem ou dúvidas</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="Escreva sua mensagem, dúvida ou sugestão para nossa equipe..."
+              ></textarea>
+            </div>
+
+            <!-- BOTÕES: Reset e Submit -->
+            <div class="form-actions">
+              <input type="reset" value="🔄 Limpar formulário" />
+              <input type="submit" value="🚀 Enviar cadastro" />
+            </div>
+
+          </fieldset>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NAVEGAÇÃO ENTRE PÁGINAS -->
+  <section style="padding:0 0 3rem;">
+    <div class="container">
+      <div class="links-paginas">
+        <a href="index.html">🏠 Início</a>
+        <a href="galeria.html">🖼️ Galeria</a>
+        <a href="tabelas-midia.html">📊 Dados & Mídia</a>
+      </div>
+    </div>
+  </section>
+
+  <a href="#topo" class="ancora-topo">↑ Voltar ao topo</a>
+
+  <footer>
+    <p><strong>TechNova</strong> — Formulário de Cadastro</p>
+    <p><a href="index.html">Início</a> · <a href="galeria.html">Galeria</a> · <a href="tabelas-midia.html">Dados & Mídia</a></p>
+    <p style="margin-top:0.5rem;font-size:0.8rem;">© 2025 TechNova. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
