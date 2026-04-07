@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botafogo — Área do Torcedor ★</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="topo">
+
+  <!-- HEADER E NAV -->
+  <header>
+    <div class="header-top">
+      <div class="logo-area">
+        <div class="logo-estrela">★</div>
+        <div class="logo-texto">
+          <h1>BOTAFOGO</h1>
+          <span>Estrela Solitária • Fundado em 1894</span>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="historia.html">História & Galeria</a></li>
+        <li><a href="multimidia.html">Multimídia</a></li>
+        <li><a href="torcedor.html" class="active">Área do Torcedor</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" style="min-height:280px;">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-estrelas">★</div>
+      <h1>ÁREA DO TORCEDOR</h1>
+      <h2>CADASTRO & PERFIL BOTAFOGUENSE</h2>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ÂNCORAS -->
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px;">
+      <a href="#cadastro" class="btn btn-outline">↓ Formulário</a>
+      <a href="#informacoes" class="btn btn-outline">↓ Informações</a>
+      <a href="index.html" class="btn btn-outline">← Voltar</a>
+    </div>
+
+    <!-- INTRO -->
+    <section id="informacoes">
+      <h2 class="section-title">Seja Parte da Família</h2>
+      <p>
+        Faça parte da maior torcida alvinegra do Brasil! O <strong>Cadastro do Torcedor
+        Botafoguense</strong> é o primeiro passo para você se conectar com o clube e receber
+        todas as novidades sobre o <em>Glorioso</em>. Preencha o formulário abaixo com seus
+        dados e conte-nos mais sobre você, sua história com o Botafogo e como você vive
+        essa paixão que não tem explicação racional — só quem é botafoguense entende!
+      </p>
+      <p>
+        Ao se cadastrar, você estará ingressando em uma <u>comunidade de mais de 10 milhões
+        de torcedores</u> espalhados pelo Brasil e pelo mundo. Receba <strong>notícias exclusivas,
+        promoções de ingressos, produtos oficiais</strong> e muito mais. Juntos, somos a
+        <em>Estrela Solitária</em> que brilha mais forte quando está unida!
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- FORMULÁRIO COMPLETO -->
+    <section id="cadastro">
+      <h2 class="section-title">Formulário de Cadastro</h2>
+
+      <div class="form-container">
+        <form action="#" method="post" id="formTorcedor">
+
+          <!-- FIELDSET 1: DADOS PESSOAIS -->
+          <fieldset>
+            <legend>👤 Dados Pessoais</legend>
+
+            <div class="form-group">
+              <label for="nome">Nome Completo *</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="nascimento">Data de Nascimento</label>
+              <input type="date" id="nascimento" name="nascimento" />
+            </div>
+
+            <div class="form-group">
+              <label for="estado">Estado</label>
+              <select id="estado" name="estado">
+                <option value="">Selecione seu estado...</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="BA">Bahia</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="outros">Outro estado</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <!-- FIELDSET 2: PERFIL TORCEDOR -->
+          <fieldset>
+            <legend>⭐ Perfil Botafoguense</legend>
+
+            <div class="form-group">
+              <label>Há quanto tempo você torce para o Botafogo?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="tempo" value="menos5" /> Menos de 5 anos</label>
+                <label><input type="radio" name="tempo" value="5a15" /> 5 a 15 anos</label>
+                <label><input type="radio" name="tempo" value="15a30" /> 15 a 30 anos</label>
+                <label><input type="radio" name="tempo" value="mais30" /> Mais de 30 anos</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Como você acompanha os jogos?</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="acompanha" value="estadio" /> No estádio</label>
+                <label><input type="checkbox" name="acompanha" value="tv" /> Pela TV</label>
+                <label><input type="checkbox" name="acompanha" value="streaming" /> Streaming</label>
+                <label><input type="checkbox" name="acompanha" value="radio" /> Pelo rádio</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="idolo">Seu ídolo favorito do Botafogo</label>
+              <select id="idolo" name="idolo">
+                <option value="">Escolha um ídolo...</option>
+                <option value="garrincha">Garrincha</option>
+                <option value="nilton">Nilton Santos</option>
+                <option value="didi">Didi</option>
+                <option value="jairzinho">Jairzinho</option>
+                <option value="tulio">Túlio Maravilha</option>
+                <option value="tiquinho">Tiquinho Soares</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <!-- FIELDSET 3: INTERESSES -->
+          <fieldset>
+            <legend>🏆 Interesses e Preferências</legend>
+
+            <div class="form-group">
+              <label>Qual seção do site mais te interessa?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="interesse" value="historia" /> História do clube</label>
+                <label><input type="radio" name="interesse" value="elenco" /> Elenco atual</label>
+                <label><input type="radio" name="interesse" value="ingressos" /> Ingressos</label>
+                <label><input type="radio" name="interesse" value="loja" /> Loja oficial</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Você possui sócio-torcedor?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="socio" value="sim" /> Sim, sou sócio</label>
+                <label><input type="radio" name="socio" value="nao" /> Não, mas quero ser</label>
+                <label><input type="radio" name="socio" value="talvez" /> Estou pensando</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Desejo receber:</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="receber" value="noticias" /> Notícias do clube</label>
+                <label><input type="checkbox" name="receber" value="promocoes" /> Promoções</label>
+                <label><input type="checkbox" name="receber" value="jogos" /> Calendário de jogos</label>
+                <label><input type="checkbox" name="receber" value="newsletter" /> Newsletter mensal</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="qtd-jogos">Quantos jogos você assiste por temporada?</label>
+              <input type="number" id="qtd-jogos" name="qtd-jogos" min="0" max="100" placeholder="Ex: 15" />
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem para o clube (opcional)</label>
+              <textarea id="mensagem" name="mensagem" rows="4"
+                placeholder="Escreva uma mensagem de apoio ao Glorioso..."></textarea>
+            </div>
+          </fieldset>
+
+          <!-- BOTÕES -->
+          <div class="form-actions">
+            <button type="submit" class="btn">✅ Enviar Cadastro</button>
+            <button type="reset" class="btn btn-outline">🔄 Limpar / Reset</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- LINKS -->
+    <section>
+      <h2 class="section-title">Explore Mais</h2>
+      <div style="display:flex; gap:15px; flex-wrap:wrap;">
+        <a href="index.html" class="btn">🏠 Início</a>
+        <a href="historia.html" class="btn">📸 História & Galeria</a>
+        <a href="multimidia.html" class="btn">🎬 Multimídia</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">★ BOTAFOGO ★</div>
+    <div class="footer-links">
+      <a href="index.html">Início</a>
+      <a href="historia.html">História</a>
+      <a href="multimidia.html">Multimídia</a>
+      <a href="torcedor.html">Torcedor</a>
+    </div>
+    <div class="footer-copy">© 2024 Botafogo de Futebol e Regatas — Projeto Educacional</div>
+  </footer>
+
+  <div style="text-align:center; padding:20px; background:#050505;">
+    <a href="#topo" class="ancora-topo">↑ Voltar ao Topo</a>
+  </div>
+
+  <script>
+    document.getElementById('formTorcedor').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('✅ Cadastro enviado com sucesso! Bem-vindo à família botafoguense! ⭐');
+    });
+  </script>
+
+</body>
+</html>
